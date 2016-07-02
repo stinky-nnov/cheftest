@@ -1,0 +1,35 @@
+DEPENDENCIES
+  apt-update
+    path: cookbooks/apt-update
+  backend
+    path: cookbooks/backend
+  database
+    path: cookbooks/database
+  frontend
+    path: cookbooks/frontend
+  glob
+    path: .
+    metadata: true
+  shared_cache
+    path: cookbooks/shared_cache
+  shared_filestorage
+    path: cookbooks/shared_filestorage
+
+GRAPH
+  apt-update (0.1.0)
+  backend (0.1.0)
+  database (0.1.0)
+    mysql (>= 0.0.0)
+  frontend (0.1.0)
+  glob (0.0.0)
+  mysql (7.2.0)
+    smf (>= 0.0.0)
+    yum-mysql-community (>= 0.0.0)
+  rbac (1.0.3)
+  shared_cache (0.1.0)
+  shared_filestorage (0.1.0)
+  smf (2.2.8)
+    rbac (>= 1.0.1)
+  yum (3.11.0)
+  yum-mysql-community (0.2.0)
+    yum (>= 3.2)
